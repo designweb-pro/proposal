@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HazimWeb Desain</title>
 
-<!-- GSAP SAFE CDN -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <style>
@@ -14,22 +13,15 @@ body{background:#000;color:#fff}
 
 /* NAV */
 header{
-position:fixed;
-width:100%;
-display:flex;
-justify-content:space-between;
-padding:15px 20px;
-background:#111;
-z-index:999;
+position:fixed;width:100%;
+display:flex;justify-content:space-between;
+padding:15px 20px;background:#111;z-index:999;
 }
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{width:28px}
 
 nav a{
-color:#aaa;
-margin-left:15px;
-cursor:pointer;
-transition:0.3s;
+color:#aaa;margin-left:15px;cursor:pointer;
 }
 nav a:hover{color:#fff}
 
@@ -45,27 +37,27 @@ text-align:center;
 /* HERO */
 .hero h1{
 font-size:32px;
+max-width:700px;
+margin:auto;
 }
 .hero p{
 color:#aaa;
-margin-top:15px;
-max-width:600px;
-margin:auto;
+margin-top:20px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.6;
 }
 
 /* BUTTON */
 .btn{
-margin-top:25px;
-display:inline-block;
+margin-top:30px;
 padding:12px 25px;
 background:#00ffae;
 color:#000;
 border-radius:6px;
 cursor:pointer;
-transition:0.3s;
-}
-.btn:hover{
-transform:scale(1.05);
+display:inline-block;
 }
 
 /* CARDS */
@@ -81,10 +73,6 @@ background:#111;
 padding:20px;
 width:240px;
 border-radius:10px;
-transition:0.3s;
-}
-.card:hover{
-transform:translateY(-8px);
 }
 
 /* VISUAL */
@@ -99,11 +87,7 @@ margin-top:40px;
 width:320px;
 height:220px;
 object-fit:cover;
-border-radius:12px;
-transition:0.5s;
-}
-.visual img:hover{
-transform:scale(1.05);
+border-radius:10px;
 }
 
 /* ABOUT */
@@ -133,74 +117,135 @@ margin-bottom:20px;
 
 <!-- HOME -->
 <section id="home" class="section active hero">
-<h1 class="fade">Premium Website That Builds Trust</h1>
+<h1 class="fade">
+Your Website Should Bring You Clients — Not Make You Look Cheap
+</h1>
+
 <p class="fade">
-We design modern, high-quality websites that make your business look professional and ready to convert visitors into clients.
+Most businesses don’t lose clients because their service is bad —
+they lose them because they don’t look professional online.
+
+When someone visits your website, they decide within seconds
+whether they trust you or not.
 </p>
-<div class="btn fade" onclick="showPage('services')">Start Project</div>
+
+<p class="fade">
+A weak website makes your business look cheap and unreliable.
+A strong website makes you look like the obvious choice.
+
+We design websites that instantly build trust,
+position your brand as premium, and help you turn visitors into paying clients.
+</p>
+
+<div class="btn fade" onclick="showPage('services')">
+Get Your Website Now
+</div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
-<h1 class="fade">Why Clients Choose Us</h1>
+<h1 class="fade">Why Serious Businesses Choose Us</h1>
+
+<p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
+You’re not just buying a website.
+
+You’re investing in how your business is perceived by potential clients.
+</p>
+
+<p class="fade" style="max-width:700px;margin:auto;color:#777;margin-top:15px">
+We focus on building websites that make your business look established,
+trustworthy, and worth paying — even before you speak to your client.
+</p>
 
 <div class="cards">
-<div class="card fade">Modern & premium design</div>
+<div class="card fade">Position your brand as premium</div>
 <div class="card fade">Increase trust instantly</div>
-<div class="card fade">Optimized for conversions</div>
-<div class="card fade">Professional branding</div>
+<div class="card fade">Convert visitors into clients</div>
+<div class="card fade">Stand out from competitors</div>
 </div>
 
 <br><br>
-<a href="https://wa.me/6287841232441" class="btn fade">Contact on WhatsApp</a>
+<a href="https://wa.me/6287841232441" class="btn fade">
+Talk About Your Project
+</a>
 </section>
 
 <!-- WEBSITE -->
 <section id="website" class="section">
-<h1 class="fade">What is a Website?</h1>
+<h1 class="fade">Your Website Is Your First Impression</h1>
+
+<p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
+Before a client contacts you, they judge your business based on your website.
+</p>
+
+<p class="fade" style="max-width:700px;margin:auto;color:#777;margin-top:15px">
+If your website looks outdated or poorly designed,
+people assume your business is the same.
+
+But when your website looks modern and professional,
+you instantly gain credibility and trust.
+</p>
 
 <div class="cards">
-<div class="card fade">Your digital business identity</div>
-<div class="card fade">Attract potential clients</div>
-<div class="card fade">Build credibility</div>
-<div class="card fade">Marketing tool 24/7</div>
+<div class="card fade">Build strong first impression</div>
+<div class="card fade">Gain client trust instantly</div>
+<div class="card fade">Communicate your value clearly</div>
+<div class="card fade">Support your business growth</div>
 </div>
 </section>
 
 <!-- PURPOSE -->
 <section id="purpose" class="section">
-<h1 class="fade">Purpose of a Website</h1>
+<h1 class="fade">If Your Website Looks Cheap, You Lose Clients</h1>
 
 <p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
-A well-designed website helps your business stand out, builds trust, and converts visitors into customers.
+In today’s digital world, people judge your business in seconds.
+</p>
+
+<p class="fade" style="max-width:700px;margin:auto;color:#777;margin-top:15px">
+A poor website creates doubt.
+A strong website creates confidence.
+
+We make sure your business is seen as professional,
+reliable, and worth choosing.
 </p>
 
 <div class="visual">
-
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
 </div>
 
 <br><br>
-<a href="https://wa.me/6287841232441" class="btn fade">Start Your Website Now</a>
+<a href="https://wa.me/6287841232441" class="btn fade">
+Let’s Build Your Website
+</a>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
 <img src="logo.png" class="about-logo fade">
+
 <h1 class="fade">HazimWeb Desain</h1>
 
-<p class="fade" style="max-width:600px;margin:auto;color:#aaa;margin-top:20px">
-We specialize in building premium, modern websites that help businesses grow and stand out in the digital world.
+<p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
+We specialize in creating modern, high-converting websites
+for businesses that want to grow and stand out.
+</p>
+
+<p class="fade" style="max-width:700px;margin:auto;color:#777;margin-top:15px">
+Our goal is simple:
+make your business look professional, trusted, and worth paying.
+
+Because in the online world — perception is everything.
 </p>
 
 <br><br>
-<a href="https://wa.me/6287841232441" class="btn fade">Contact Me</a>
+<a href="https://wa.me/6287841232441" class="btn fade">
+Contact Me
+</a>
 </section>
 
 <script>
-// GSAP SAFE ANIMATION
 function animatePage(page){
 gsap.from("#"+page+" .fade",{
 y:30,
@@ -210,7 +255,6 @@ duration:0.5
 });
 }
 
-// NAVIGATION
 function showPage(page){
 document.querySelectorAll('.section').forEach(sec=>{
 sec.classList.remove('active');
@@ -220,10 +264,7 @@ document.getElementById(page).classList.add('active');
 animatePage(page);
 }
 
-// INIT
-window.onload = ()=>{
-animatePage("home");
-}
+window.onload=()=>{animatePage("home");}
 </script>
 
 </body>
