@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HazimWeb Desain</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<!-- GSAP SAFE CDN -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,Arial}
@@ -17,17 +18,16 @@ position:fixed;
 width:100%;
 display:flex;
 justify-content:space-between;
-padding:20px 40px;
-background:rgba(0,0,0,0.5);
-backdrop-filter:blur(10px);
+padding:15px 20px;
+background:#111;
 z-index:999;
 }
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{width:28px}
 
 nav a{
-margin-left:20px;
 color:#aaa;
+margin-left:15px;
 cursor:pointer;
 transition:0.3s;
 }
@@ -37,41 +37,35 @@ nav a:hover{color:#fff}
 .section{
 display:none;
 min-height:100vh;
-padding:120px 20px;
+padding:100px 20px;
 text-align:center;
 }
 .active{display:block}
 
 /* HERO */
-.hero{
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
 .hero h1{
-font-size:42px;
-max-width:700px;
+font-size:32px;
 }
 .hero p{
 color:#aaa;
-margin-top:20px;
+margin-top:15px;
 max-width:600px;
-line-height:1.6;
+margin:auto;
 }
 
 /* BUTTON */
 .btn{
-margin-top:30px;
-padding:12px 28px;
+margin-top:25px;
+display:inline-block;
+padding:12px 25px;
 background:#00ffae;
 color:#000;
-border-radius:30px;
+border-radius:6px;
 cursor:pointer;
 transition:0.3s;
 }
 .btn:hover{
-transform:scale(1.08);
+transform:scale(1.05);
 }
 
 /* CARDS */
@@ -79,79 +73,48 @@ transform:scale(1.08);
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:20px;
-margin-top:40px;
+gap:15px;
+margin-top:30px;
 }
 .card{
 background:#111;
-padding:25px;
-width:260px;
-border-radius:15px;
-transition:0.4s;
+padding:20px;
+width:240px;
+border-radius:10px;
+transition:0.3s;
 }
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
-/* IMAGE CINEMATIC */
+/* VISUAL */
 .visual{
-margin-top:60px;
 display:flex;
 flex-wrap:wrap;
-gap:20px;
 justify-content:center;
+gap:20px;
+margin-top:40px;
 }
-
-.img-box{
-position:relative;
+.visual img{
 width:320px;
 height:220px;
-overflow:hidden;
-border-radius:20px;
-}
-
-.img-box img{
-width:100%;
-height:100%;
 object-fit:cover;
-transition:0.6s;
+border-radius:12px;
+transition:0.5s;
 }
-
-.img-box:hover img{
-transform:scale(1.1);
-}
-
-.overlay{
-position:absolute;
-bottom:0;
-width:100%;
-padding:15px;
-background:linear-gradient(to top,rgba(0,0,0,0.8),transparent);
-font-size:14px;
+.visual img:hover{
+transform:scale(1.05);
 }
 
 /* ABOUT */
 .about-logo{
-width:90px;
+width:70px;
 margin-bottom:20px;
-}
-
-/* TRANSITION */
-.transition{
-position:fixed;
-width:100%;
-height:100%;
-background:#000;
-top:0;
-transform:translateY(-100%);
-z-index:2000;
 }
 </style>
 </head>
 
 <body>
-
-<div class="transition"></div>
 
 <header>
 <div class="logo">
@@ -160,35 +123,32 @@ z-index:2000;
 </div>
 
 <nav>
-<a onclick="goPage('home')">Home</a>
-<a onclick="goPage('services')">Services</a>
-<a onclick="goPage('website')">Website</a>
-<a onclick="goPage('purpose')">Purpose</a>
-<a onclick="goPage('about')">About</a>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('services')">Services</a>
+<a onclick="showPage('website')">Website</a>
+<a onclick="showPage('purpose')">Purpose</a>
+<a onclick="showPage('about')">About</a>
 </nav>
 </header>
 
 <!-- HOME -->
 <section id="home" class="section active hero">
-<h1 class="fade">Premium Website That Builds Trust & Converts</h1>
+<h1 class="fade">Premium Website That Builds Trust</h1>
 <p class="fade">
-Your website is your first impression. We design modern, high-end websites that instantly make your business look credible and professional.
+We design modern, high-quality websites that make your business look professional and ready to convert visitors into clients.
 </p>
-<div class="btn fade" onclick="goPage('services')">Start Project</div>
+<div class="btn fade" onclick="showPage('services')">Start Project</div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="section">
 <h1 class="fade">Why Clients Choose Us</h1>
-<p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
-We don’t just build websites. We create experiences that make your business stand out and convert visitors into clients.
-</p>
 
 <div class="cards">
-<div class="card fade">Premium & modern design</div>
+<div class="card fade">Modern & premium design</div>
 <div class="card fade">Increase trust instantly</div>
-<div class="card fade">Built for conversion</div>
-<div class="card fade">Stand out from competitors</div>
+<div class="card fade">Optimized for conversions</div>
+<div class="card fade">Professional branding</div>
 </div>
 
 <br><br>
@@ -198,15 +158,12 @@ We don’t just build websites. We create experiences that make your business st
 <!-- WEBSITE -->
 <section id="website" class="section">
 <h1 class="fade">What is a Website?</h1>
-<p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
-A website is your digital identity. It communicates your value and helps customers trust your business.
-</p>
 
 <div class="cards">
-<div class="card fade">Professional presence</div>
-<div class="card fade">Attract customers</div>
+<div class="card fade">Your digital business identity</div>
+<div class="card fade">Attract potential clients</div>
 <div class="card fade">Build credibility</div>
-<div class="card fade">24/7 marketing tool</div>
+<div class="card fade">Marketing tool 24/7</div>
 </div>
 </section>
 
@@ -214,21 +171,14 @@ A website is your digital identity. It communicates your value and helps custome
 <section id="purpose" class="section">
 <h1 class="fade">Purpose of a Website</h1>
 
-<p class="fade" style="max-width:750px;margin:auto;color:#aaa;margin-top:20px">
-A strong website builds trust, attracts new clients, and helps your business grow faster in the digital world.
+<p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
+A well-designed website helps your business stand out, builds trust, and converts visitors into customers.
 </p>
 
 <div class="visual">
 
-<div class="img-box fade">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-<div class="overlay">Professional Image</div>
-</div>
-
-<div class="img-box fade">
-<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4">
-<div class="overlay">Build Trust</div>
-</div>
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 
 </div>
 
@@ -241,8 +191,8 @@ A strong website builds trust, attracts new clients, and helps your business gro
 <img src="logo.png" class="about-logo fade">
 <h1 class="fade">HazimWeb Desain</h1>
 
-<p class="fade" style="max-width:700px;margin:auto;color:#aaa;margin-top:20px">
-We are a professional web design service focused on creating premium, modern, and high-converting websites for businesses.
+<p class="fade" style="max-width:600px;margin:auto;color:#aaa;margin-top:20px">
+We specialize in building premium, modern websites that help businesses grow and stand out in the digital world.
 </p>
 
 <br><br>
@@ -250,37 +200,30 @@ We are a professional web design service focused on creating premium, modern, an
 </section>
 
 <script>
-// PAGE TRANSITION
-function goPage(page){
-let tl = gsap.timeline();
+// GSAP SAFE ANIMATION
+function animatePage(page){
+gsap.from("#"+page+" .fade",{
+y:30,
+opacity:0,
+stagger:0.15,
+duration:0.5
+});
+}
 
-tl.to(".transition",{y:"0%",duration:0.4});
-
-tl.add(()=>{
+// NAVIGATION
+function showPage(page){
 document.querySelectorAll('.section').forEach(sec=>{
 sec.classList.remove('active');
 });
 document.getElementById(page).classList.add('active');
-});
 
-tl.to(".transition",{y:"100%",duration:0.4});
-tl.set(".transition",{y:"-100%"});
-
-tl.from("#"+page+" .fade",{
-y:50,
-opacity:0,
-stagger:0.15,
-duration:0.6
-});
+animatePage(page);
 }
 
 // INIT
-gsap.from(".fade",{
-y:50,
-opacity:0,
-stagger:0.15,
-duration:0.6
-});
+window.onload = ()=>{
+animatePage("home");
+}
 </script>
 
 </body>
